@@ -10,6 +10,14 @@
 		CC5C31F420B4F2E30077C7A2 /* DirectionalPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */; };
 		CC5C31F920B4F2E30077C7A2 /* DirectionalPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C31F820B4F2E30077C7A2 /* DirectionalPadTests.swift */; };
 		CC5C31FB20B4F2E30077C7A2 /* DirectionalPad.h in Headers */ = {isa = PBXBuildFile; fileRef = CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC5C320520B4F3030077C7A2 /* DirectionalPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */; };
+		CC5C320D20B4F36F0077C7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C320C20B4F36F0077C7A2 /* AppDelegate.swift */; };
+		CC5C320F20B4F36F0077C7A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C320E20B4F36F0077C7A2 /* ViewController.swift */; };
+		CC5C321220B4F36F0077C7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5C321020B4F36F0077C7A2 /* Main.storyboard */; };
+		CC5C321420B4F3710077C7A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5C321320B4F3710077C7A2 /* Assets.xcassets */; };
+		CC5C321720B4F3710077C7A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5C321520B4F3710077C7A2 /* LaunchScreen.storyboard */; };
+		CC5C322220B4F3710077C7A2 /* DirectionalPadTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C322120B4F3710077C7A2 /* DirectionalPadTestAppUITests.swift */; };
+		CC5C322B20B4F3A70077C7A2 /* DirectionalPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +28,13 @@
 			remoteGlobalIDString = CC5C31E920B4F2E30077C7A2;
 			remoteInfo = DirectionalPad;
 		};
+		CC5C321E20B4F3710077C7A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5C31E120B4F2E30077C7A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC5C320920B4F36E0077C7A2;
+			remoteInfo = DirectionalPadTestApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +44,17 @@
 		CC5C31F320B4F2E30077C7A2 /* DirectionalPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectionalPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5C31F820B4F2E30077C7A2 /* DirectionalPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPadTests.swift; sourceTree = "<group>"; };
 		CC5C31FA20B4F2E30077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPad.swift; sourceTree = "<group>"; };
+		CC5C320A20B4F36E0077C7A2 /* DirectionalPadTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectionalPadTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5C320C20B4F36F0077C7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC5C320E20B4F36F0077C7A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC5C321120B4F36F0077C7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC5C321320B4F3710077C7A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC5C321620B4F3710077C7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC5C321820B4F3710077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5C321D20B4F3710077C7A2 /* DirectionalPadTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectionalPadTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5C322120B4F3710077C7A2 /* DirectionalPadTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPadTestAppUITests.swift; sourceTree = "<group>"; };
+		CC5C322320B4F3710077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC5C320720B4F36E0077C7A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5C322B20B4F3A70077C7A2 /* DirectionalPad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5C321A20B4F3710077C7A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,7 +96,10 @@
 			children = (
 				CC5C31EC20B4F2E30077C7A2 /* DirectionalPad */,
 				CC5C31F720B4F2E30077C7A2 /* DirectionalPadTests */,
+				CC5C320B20B4F36F0077C7A2 /* DirectionalPadTestApp */,
+				CC5C322020B4F3710077C7A2 /* DirectionalPadTestAppUITests */,
 				CC5C31EB20B4F2E30077C7A2 /* Products */,
+				CC5C322A20B4F3A70077C7A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +108,8 @@
 			children = (
 				CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */,
 				CC5C31F320B4F2E30077C7A2 /* DirectionalPadTests.xctest */,
+				CC5C320A20B4F36E0077C7A2 /* DirectionalPadTestApp.app */,
+				CC5C321D20B4F3710077C7A2 /* DirectionalPadTestAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */,
+				CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */,
 				CC5C31EE20B4F2E30077C7A2 /* Info.plist */,
 			);
 			path = DirectionalPad;
@@ -84,6 +131,35 @@
 				CC5C31FA20B4F2E30077C7A2 /* Info.plist */,
 			);
 			path = DirectionalPadTests;
+			sourceTree = "<group>";
+		};
+		CC5C320B20B4F36F0077C7A2 /* DirectionalPadTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				CC5C320C20B4F36F0077C7A2 /* AppDelegate.swift */,
+				CC5C320E20B4F36F0077C7A2 /* ViewController.swift */,
+				CC5C321020B4F36F0077C7A2 /* Main.storyboard */,
+				CC5C321320B4F3710077C7A2 /* Assets.xcassets */,
+				CC5C321520B4F3710077C7A2 /* LaunchScreen.storyboard */,
+				CC5C321820B4F3710077C7A2 /* Info.plist */,
+			);
+			path = DirectionalPadTestApp;
+			sourceTree = "<group>";
+		};
+		CC5C322020B4F3710077C7A2 /* DirectionalPadTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC5C322120B4F3710077C7A2 /* DirectionalPadTestAppUITests.swift */,
+				CC5C322320B4F3710077C7A2 /* Info.plist */,
+			);
+			path = DirectionalPadTestAppUITests;
+			sourceTree = "<group>";
+		};
+		CC5C322A20B4F3A70077C7A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +212,41 @@
 			productReference = CC5C31F320B4F2E30077C7A2 /* DirectionalPadTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CC5C320920B4F36E0077C7A2 /* DirectionalPadTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5C322420B4F3710077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPadTestApp" */;
+			buildPhases = (
+				CC5C320620B4F36E0077C7A2 /* Sources */,
+				CC5C320720B4F36E0077C7A2 /* Frameworks */,
+				CC5C320820B4F36E0077C7A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DirectionalPadTestApp;
+			productName = DirectionalPadTestApp;
+			productReference = CC5C320A20B4F36E0077C7A2 /* DirectionalPadTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC5C321C20B4F3710077C7A2 /* DirectionalPadTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5C322720B4F3710077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPadTestAppUITests" */;
+			buildPhases = (
+				CC5C321920B4F3710077C7A2 /* Sources */,
+				CC5C321A20B4F3710077C7A2 /* Frameworks */,
+				CC5C321B20B4F3710077C7A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC5C321F20B4F3710077C7A2 /* PBXTargetDependency */,
+			);
+			name = DirectionalPadTestAppUITests;
+			productName = DirectionalPadTestAppUITests;
+			productReference = CC5C321D20B4F3710077C7A2 /* DirectionalPadTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,9 +259,17 @@
 				TargetAttributes = {
 					CC5C31E920B4F2E30077C7A2 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					CC5C31F220B4F2E30077C7A2 = {
 						CreatedOnToolsVersion = 9.3.1;
+					};
+					CC5C320920B4F36E0077C7A2 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					CC5C321C20B4F3710077C7A2 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = CC5C320920B4F36E0077C7A2;
 					};
 				};
 			};
@@ -160,6 +279,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CC5C31E020B4F2E30077C7A2;
 			productRefGroup = CC5C31EB20B4F2E30077C7A2 /* Products */;
@@ -168,6 +288,8 @@
 			targets = (
 				CC5C31E920B4F2E30077C7A2 /* DirectionalPad */,
 				CC5C31F220B4F2E30077C7A2 /* DirectionalPadTests */,
+				CC5C320920B4F36E0077C7A2 /* DirectionalPadTestApp */,
+				CC5C321C20B4F3710077C7A2 /* DirectionalPadTestAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +309,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC5C320820B4F36E0077C7A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5C321720B4F3710077C7A2 /* LaunchScreen.storyboard in Resources */,
+				CC5C321420B4F3710077C7A2 /* Assets.xcassets in Resources */,
+				CC5C321220B4F36F0077C7A2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5C321B20B4F3710077C7A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5C320520B4F3030077C7A2 /* DirectionalPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +345,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC5C320620B4F36E0077C7A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5C320F20B4F36F0077C7A2 /* ViewController.swift in Sources */,
+				CC5C320D20B4F36F0077C7A2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5C321920B4F3710077C7A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5C322220B4F3710077C7A2 /* DirectionalPadTestAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,7 +370,31 @@
 			target = CC5C31E920B4F2E30077C7A2 /* DirectionalPad */;
 			targetProxy = CC5C31F520B4F2E30077C7A2 /* PBXContainerItemProxy */;
 		};
+		CC5C321F20B4F3710077C7A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC5C320920B4F36E0077C7A2 /* DirectionalPadTestApp */;
+			targetProxy = CC5C321E20B4F3710077C7A2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC5C321020B4F36F0077C7A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5C321120B4F36F0077C7A2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC5C321520B4F3710077C7A2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5C321620B4F3710077C7A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CC5C31FC20B4F2E30077C7A2 /* Debug */ = {
@@ -339,6 +520,7 @@
 		CC5C31FF20B4F2E30077C7A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPad;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +547,7 @@
 		CC5C320020B4F2E30077C7A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +573,7 @@
 		CC5C320220B4F2E30077C7A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55DMNY3HQL;
 				INFOPLIST_FILE = DirectionalPadTests/Info.plist;
@@ -407,6 +592,7 @@
 		CC5C320320B4F2E30077C7A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55DMNY3HQL;
 				INFOPLIST_FILE = DirectionalPadTests/Info.plist;
@@ -419,6 +605,82 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC5C322520B4F3710077C7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55DMNY3HQL;
+				INFOPLIST_FILE = DirectionalPadTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPadTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC5C322620B4F3710077C7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55DMNY3HQL;
+				INFOPLIST_FILE = DirectionalPadTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPadTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC5C322820B4F3710077C7A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55DMNY3HQL;
+				INFOPLIST_FILE = DirectionalPadTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPadTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DirectionalPadTestApp;
+			};
+			name = Debug;
+		};
+		CC5C322920B4F3710077C7A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55DMNY3HQL;
+				INFOPLIST_FILE = DirectionalPadTestAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPadTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DirectionalPadTestApp;
 			};
 			name = Release;
 		};
@@ -448,6 +710,24 @@
 			buildConfigurations = (
 				CC5C320220B4F2E30077C7A2 /* Debug */,
 				CC5C320320B4F2E30077C7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5C322420B4F3710077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPadTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5C322520B4F3710077C7A2 /* Debug */,
+				CC5C322620B4F3710077C7A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5C322720B4F3710077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPadTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5C322820B4F3710077C7A2 /* Debug */,
+				CC5C322920B4F3710077C7A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
