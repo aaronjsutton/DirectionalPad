@@ -31,6 +31,7 @@
 		CC5C31F820B4F2E30077C7A2 /* DirectionalPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPadTests.swift; sourceTree = "<group>"; };
 		CC5C31FA20B4F2E30077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPad.swift; sourceTree = "<group>"; };
+		CCB0F74420B72D250008A525 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		CC5C31E020B4F2E30077C7A2 = {
 			isa = PBXGroup;
 			children = (
+				CCB0F74420B72D250008A525 /* README.md */,
 				CC5C31EC20B4F2E30077C7A2 /* DirectionalPad */,
 				CC5C31F720B4F2E30077C7A2 /* DirectionalPadTests */,
 				CC5C31EB20B4F2E30077C7A2 /* Products */,
