@@ -19,7 +19,7 @@ public protocol DirectionalPadDelegate: class {
 	///
 	/// - Parameter point: The location of the current track point.
 	///										 Normalized to the unit coordinate space.
-	func track(unit point: CGPoint)
+	func track(_ direction: DirectionalPad.Direction)
 
 	/// Called when the user ends the current touch event.
 	/// (i.e, the user lifts their finger from the screen)
@@ -47,7 +47,7 @@ open class DirectionalPad: UIView {
 
 	/// The default sensitivity value.
 	open class var sensitivityDefault: CGFloat {
-		return  0.10
+		return 0.10
 	}
 
 	/// The delegate reference. Typically an object that
@@ -58,11 +58,14 @@ open class DirectionalPad: UIView {
 	var recognizer: UIPanGestureRecognizer!
 
 	/// The sensitivity metric determines how far a gesture must
-	/// travel from the initial tap point before control tracking
+	/// travel, in unit coordinates, from the initial tap point before control tracking
 	/// begins.
 	///
 	/// The lower this value, the quicker the control surface will
 	/// begin tracking a pan gesture.
+	///
+	/// - Note: Sensitivty is given in the unit points, therefore, a value greater than
+	/// 				one is capped.
 	///
 	/// - Warning: Setting this value below zero is undefined behavior.
 	@IBInspectable
@@ -82,6 +85,15 @@ open class DirectionalPad: UIView {
 		case West = 270
 	}
 
+	/// Axes used by the direction system.
+	///
+	/// - X: The horizontal axis.
+	/// - Y: The vertical axis.
+	private enum Axis {
+		case X
+		case Y
+	}
+
 	// MARK: - Initializers
 
 	/// Initialize from a `nib` file
@@ -94,8 +106,9 @@ open class DirectionalPad: UIView {
 	override public init(frame: CGRect) {
 		super.init(frame: frame)
 		self.recognizer = configureRecognizer()
+		// Cap sensitivity value
+		if sensitivity > 1 { sensitivity = 1 }
 	}
-
 
 	/// [init(frame:)]: https://developer.apple.com/documentation/uikit/uiview/1622488-init
 	///
@@ -115,7 +128,7 @@ open class DirectionalPad: UIView {
 	///
 	/// - Returns: The newly created recognizer.
 	private func configureRecognizer() -> UIPanGestureRecognizer {
-		let recognizer = UIPanGestureRecognizer(target: self, action: #selector(actionHandler))
+		recognizer = UIPanGestureRecognizer(target: self, action: #selector(self.actionHandler))
 		addGestureRecognizer(recognizer)
 		return recognizer
 	}
@@ -124,8 +137,66 @@ open class DirectionalPad: UIView {
 
 	/// Called by the gesture recognizer to respond to
 	/// touch events.
-	@objc private func actionHandler() {
+	@objc func actionHandler() {
+		switch recognizer.state {
+		case .began:		  delegate?.trackingBegan()
+		case .ended: 			delegate?.trackingEnded()
+		case .cancelled:  delegate?.trackingCancelled()
+		case .changed:
+			var translation = unit(point: recognizer.translation(in: self))
+			if !aboveThreshhold(translation) { break }
+			orient(point: &translation)
+			delegate?.track(direction(of: translation))
+		default: break
+		}
+	}
 
+	/// Determines if a point is above the sensitivity threshold.
+	///
+	/// - Parameter point: The point.
+	/// - Returns: True/False if the point should be tracked.
+	private func aboveThreshhold(_ point: CGPoint) -> Bool {
+		return abs(point.x) > sensitivity || abs(point.y) > sensitivity
+	}
+
+	/// Determine the movement direction of the current translation point.
+	///
+	/// - Precondition: The point is above the sensitivity threshold.
+	///
+	/// Axis priority allows the user to change direction without ending
+	/// the current gesture.
+	///
+	/// - Parameter point: The translation point.
+	/// - Returns: The direction of the translation.
+	func direction(of point: CGPoint) -> Direction {
+
+		// Which axis has priority.
+		var prioritized: Axis? = nil
+
+		// Determine which axis has priority.
+		switch (abs(point.x), abs(point.y)) {
+		case let (x, y) where x >= y: prioritized = .X
+		case let (x, y) where x < y: prioritized = .Y
+		default: fatalError()
+		}
+
+		// Calculate the direction based on priority.
+		switch (point.x, point.y) {
+		case let (x, _) where prioritized == .X:
+			switch x {
+			case -1..<0: return .West 	// Negative X value
+			case 0...: return .East		// Positive X value
+			default: break
+			}
+		case let (_, y) where prioritized == .Y:
+			switch y {
+			case -1..<0: return .South	// Negative Y value
+			case 0...1: return .North 	// Positive X value
+			default: break
+			}
+		default: break
+		}
+		return .North // Default value return, this should never happen.
 	}
 
 	// MARK: - Mathematical Helpers
@@ -135,8 +206,29 @@ open class DirectionalPad: UIView {
 	/// - Parameter point: The absolute point within the view's frame.
 	/// - Returns: The unit point within the view's frame.
 	func unit(point: CGPoint) -> CGPoint {
-		let unitX = point.x / bounds.maxX
-		let unitY = point.y / bounds.maxY
+		var unitX = point.x / bounds.maxX
+		var unitY = point.y / bounds.maxY
+		if unitX > 1 { unitX = 1 }
+		if unitY > 1 { unitY = 1 }
 		return CGPoint(x: unitX, y: unitY)
+	}
+
+	/// Map a translation point's coordinates to the axis
+	/// used to determine direction.
+	///
+	/// - Parameter point: The point to map
+	func orient(point: inout CGPoint) {
+		point.x.negate()
+		point.y.negate()
+	}
+
+	/// Returns the radian value of a direction.
+	/// Useful when animating the rotation of an
+	/// SKNode.
+	///
+	/// - Parameter direction: The direction.
+	/// - Returns: The rotation value expressed in radians.
+	public class func radians(for direction: Direction) -> CGFloat {
+		return direction.rawValue * (CGFloat.pi / 180)
 	}
 }
