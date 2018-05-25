@@ -7,4 +7,5 @@ A `DirectionalPad` view can be implemented using the interface builder, or in Sw
 
 To respond to events from a `DirectionalPad`, register an object as it's delegate.
 
-
+Implement the methods that respond to changes in touch events. For more information on these methods,
+see the [documentation](https://aaronjsutton.github.io/DirectionalPad/)
