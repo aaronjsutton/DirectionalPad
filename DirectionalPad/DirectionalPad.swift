@@ -17,8 +17,8 @@ public protocol DirectionalPadDelegate: class {
 	/// Called when tracking data was updated.
 	/// (i.e, the user's finger moved across the screen)
 	///
-	/// - Parameter point: The location of the current track point.
-	///										 Normalized to the unit coordinate space.
+	/// - Parameter direction: The `Direction` that is currently
+	///												 being tracked.
 	func track(_ direction: DirectionalPad.Direction)
 
 	/// Called when the user ends the current touch event.

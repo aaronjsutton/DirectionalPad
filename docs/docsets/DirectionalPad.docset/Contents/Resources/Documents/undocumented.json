@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/aaronsutton/Documents/Code/Swift/DirectionalPad/DirectionalPad/DirectionalPad.swift",
+      "line": 77,
+      "symbol": "DirectionalPad.Direction.North",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aaronsutton/Documents/Code/Swift/DirectionalPad/DirectionalPad/DirectionalPad.swift",
+      "line": 78,
+      "symbol": "DirectionalPad.Direction.East",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aaronsutton/Documents/Code/Swift/DirectionalPad/DirectionalPad/DirectionalPad.swift",
+      "line": 79,
+      "symbol": "DirectionalPad.Direction.South",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aaronsutton/Documents/Code/Swift/DirectionalPad/DirectionalPad/DirectionalPad.swift",
+      "line": 80,
+      "symbol": "DirectionalPad.Direction.West",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/aaronsutton/Documents/Code/Swift/DirectionalPad"
+}
