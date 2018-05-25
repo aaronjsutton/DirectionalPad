@@ -143,8 +143,9 @@ open class DirectionalPad: UIView {
 		case .ended: 			delegate?.trackingEnded()
 		case .cancelled:  delegate?.trackingCancelled()
 		case .changed:
-			var translation = unit(point: recognizer.translation(in: self))
+			var translation = recognizer.translation(in: self)
 			if !aboveThreshhold(translation) { break }
+			unit(convert: &translation)
 			orient(point: &translation)
 			delegate?.track(direction(of: translation))
 		default: break
@@ -204,13 +205,11 @@ open class DirectionalPad: UIView {
 	/// Convert an absolute coordinate to a unit point.
 	///
 	/// - Parameter point: The absolute point within the view's frame.
-	/// - Returns: The unit point within the view's frame.
-	func unit(point: CGPoint) -> CGPoint {
-		var unitX = point.x / bounds.maxX
-		var unitY = point.y / bounds.maxY
-		if unitX > 1 { unitX = 1 }
-		if unitY > 1 { unitY = 1 }
-		return CGPoint(x: unitX, y: unitY)
+	func unit(convert point: inout CGPoint) {
+		point.x /= bounds.maxX
+		point.y /= bounds.maxY
+		if point.x > 1 { point.x = 1 }
+		if point.y > 1 { point.y = 1 }
 	}
 
 	/// Map a translation point's coordinates to the axis
