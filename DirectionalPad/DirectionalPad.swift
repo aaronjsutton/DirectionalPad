@@ -32,13 +32,8 @@ public protocol DirectionalPadDelegate: class {
 
 // MARK: - Default Delegate Implementations
 public extension DirectionalPadDelegate {
-	func trackingBegan() {
-		return
-	}
-
-	func trackingCancelled() {
-		return
-	}
+	func trackingBegan() { return }
+	func trackingCancelled() { return }
 }
 
 // MARK: - UIView Subclass
@@ -58,14 +53,14 @@ open class DirectionalPad: UIView {
 	var recognizer: UIPanGestureRecognizer!
 
 	/// The sensitivity metric determines how far a gesture must
-	/// travel, in unit coordinates, from the initial tap point before control tracking
-	/// begins.
+	/// travel, in unit coordinates, from the initial tap point before control
+	/// tracking begins.
 	///
 	/// The lower this value, the quicker the control surface will
 	/// begin tracking a pan gesture.
 	///
-	/// - Note: Sensitivty is given in the unit points, therefore, a value greater than
-	/// 				one is capped.
+	/// - Note: Sensitivty is given in the unit points, therefore, a value greater
+	/// 				than one is capped.
 	///
 	/// - Warning: Setting this value below zero is undefined behavior.
 	@IBInspectable
@@ -110,7 +105,8 @@ open class DirectionalPad: UIView {
 		if sensitivity > 1 { sensitivity = 1 }
 	}
 
-	/// [init(frame:)]: https://developer.apple.com/documentation/uikit/uiview/1622488-init
+	/// [init(frame:)]:
+	/// https://developer.apple.com/documentation/uikit/uiview/1622488-init
 	///
 	/// Initialize with a specified frame and sensitivity.
 	///
@@ -128,7 +124,8 @@ open class DirectionalPad: UIView {
 	///
 	/// - Returns: The newly created recognizer.
 	private func configureRecognizer() -> UIPanGestureRecognizer {
-		recognizer = UIPanGestureRecognizer(target: self, action: #selector(self.actionHandler))
+		recognizer = UIPanGestureRecognizer(target: self,
+																				action: #selector(self.actionHandler))
 		addGestureRecognizer(recognizer)
 		return recognizer
 	}
@@ -164,7 +161,8 @@ open class DirectionalPad: UIView {
 	///
 	/// - Precondition: The point is above the sensitivity threshold.
 	///
-	/// Axis priority allows the user to change direction without ending
+	/// Axis priority determines which axis is used during diagonal swipes,
+	/// and allows the user to change direction without ending
 	/// the current gesture.
 	///
 	/// - Parameter point: The translation point.
@@ -186,7 +184,7 @@ open class DirectionalPad: UIView {
 		case let (x, _) where prioritized == .X:
 			switch x {
 			case -1..<0: return .West 	// Negative X value
-			case 0...: return .East		// Positive X value
+			case 0...: return .East		  // Positive X value
 			default: break
 			}
 		case let (_, y) where prioritized == .Y:
