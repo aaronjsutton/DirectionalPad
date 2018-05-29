@@ -1,6 +1,8 @@
 #  DirectionalPad
 A `UIView` that implements 4-way D-Pad style functionality.
 
+[![Build Status](https://travis-ci.com/aaronjsutton/DirectionalPad.svg?branch=develop)](https://travis-ci.com/aaronjsutton/DirectionalPad)
+
 ## Usage
 
 A `DirectionalPad` view can be implemented using the interface builder, or in Swift code.

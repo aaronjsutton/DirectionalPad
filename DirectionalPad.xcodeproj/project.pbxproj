@@ -27,9 +27,9 @@
 		CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DirectionalPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectionalPad.h; sourceTree = "<group>"; };
 		CC5C31EE20B4F2E30077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5C31F320B4F2E30077C7A2 /* DirectionalPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectionalPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5C31F320B4F2E30077C7A2 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5C31F820B4F2E30077C7A2 /* DirectionalPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPadTests.swift; sourceTree = "<group>"; };
-		CC5C31FA20B4F2E30077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5C31FA20B4F2E30077C7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Unit Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalPad.swift; sourceTree = "<group>"; };
 		CCB0F74420B72D250008A525 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CCB0F74420B72D250008A525 /* README.md */,
-				CC5C31EC20B4F2E30077C7A2 /* DirectionalPad */,
-				CC5C31F720B4F2E30077C7A2 /* DirectionalPadTests */,
+				CC5C31EC20B4F2E30077C7A2 /* iOS */,
+				CC5C31F720B4F2E30077C7A2 /* Unit Tests */,
 				CC5C31EB20B4F2E30077C7A2 /* Products */,
 				CC5C322A20B4F3A70077C7A2 /* Frameworks */,
 			);
@@ -68,28 +68,27 @@
 			isa = PBXGroup;
 			children = (
 				CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */,
-				CC5C31F320B4F2E30077C7A2 /* DirectionalPadTests.xctest */,
+				CC5C31F320B4F2E30077C7A2 /* Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC5C31EC20B4F2E30077C7A2 /* DirectionalPad */ = {
+		CC5C31EC20B4F2E30077C7A2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */,
-				CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */,
+				CCE3743420BE0D03009DBF23 /* Source */,
 				CC5C31EE20B4F2E30077C7A2 /* Info.plist */,
 			);
-			path = DirectionalPad;
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		CC5C31F720B4F2E30077C7A2 /* DirectionalPadTests */ = {
+		CC5C31F720B4F2E30077C7A2 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				CC5C31F820B4F2E30077C7A2 /* DirectionalPadTests.swift */,
 				CC5C31FA20B4F2E30077C7A2 /* Info.plist */,
 			);
-			path = DirectionalPadTests;
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		CC5C322A20B4F3A70077C7A2 /* Frameworks */ = {
@@ -97,6 +96,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCE3743420BE0D03009DBF23 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */,
+				CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +139,9 @@
 			productReference = CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CC5C31F220B4F2E30077C7A2 /* DirectionalPadTests */ = {
+		CC5C31F220B4F2E30077C7A2 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC5C320120B4F2E30077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPadTests" */;
+			buildConfigurationList = CC5C320120B4F2E30077C7A2 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
 			buildPhases = (
 				CC5C31EF20B4F2E30077C7A2 /* Sources */,
 				CC5C31F020B4F2E30077C7A2 /* Frameworks */,
@@ -144,9 +152,9 @@
 			dependencies = (
 				CC5C31F620B4F2E30077C7A2 /* PBXTargetDependency */,
 			);
-			name = DirectionalPadTests;
+			name = "Unit Tests";
 			productName = DirectionalPadTests;
-			productReference = CC5C31F320B4F2E30077C7A2 /* DirectionalPadTests.xctest */;
+			productReference = CC5C31F320B4F2E30077C7A2 /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +190,7 @@
 			projectRoot = "";
 			targets = (
 				CC5C31E920B4F2E30077C7A2 /* DirectionalPad */,
-				CC5C31F220B4F2E30077C7A2 /* DirectionalPadTests */,
+				CC5C31F220B4F2E30077C7A2 /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,7 +373,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DirectionalPad/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +401,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DirectionalPad/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,7 +422,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79S8R8WVLX;
-				INFOPLIST_FILE = DirectionalPadTests/Info.plist;
+				INFOPLIST_FILE = "Unit Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,7 +441,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79S8R8WVLX;
-				INFOPLIST_FILE = DirectionalPadTests/Info.plist;
+				INFOPLIST_FILE = "Unit Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC5C320120B4F2E30077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPadTests" */ = {
+		CC5C320120B4F2E30077C7A2 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC5C320220B4F2E30077C7A2 /* Debug */,

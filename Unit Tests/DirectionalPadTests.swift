@@ -34,9 +34,9 @@ class DirectionalPadTests: XCTestCase {
 
 	func testUnitPointConversion() {
 		let subject = DirectionalPad(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-		XCTAssert(subject.unit(point: CGPoint(x: 50, y: 50)) == CGPoint(x: 0.5, y: 0.5))
-		XCTAssert(subject.unit(point: CGPoint(x: 0, y: 0)) == CGPoint(x: 0, y: 0))
-		XCTAssert(subject.unit(point: CGPoint(x: 100, y: 100)) == CGPoint(x: 1, y: 1))
+		var point = CGPoint(x: 50, y: 50)
+		subject.unit(convert: &point)
+		assert(point == CGPoint(x: 0.5, y: 0.5))
 	}
 
 	func testDirectionCalculation() {
@@ -48,7 +48,6 @@ class DirectionalPadTests: XCTestCase {
 			_ = subject.direction(of: CGPoint(x: -0.3, y: -0.259))
 		}
 	}
-
 
 	override func tearDown() {
 		// Put teardown code here. This method is called after the invocation of each test method in the class.
