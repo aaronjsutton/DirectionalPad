@@ -23,6 +23,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CCE3743E20BE2A24009DBF23 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CC5C31EA20B4F2E30077C7A2 /* DirectionalPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DirectionalPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectionalPad.h; sourceTree = "<group>"; };
@@ -57,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				CCB0F74420B72D250008A525 /* README.md */,
-				CC5C31EC20B4F2E30077C7A2 /* iOS */,
+				CC5C31EC20B4F2E30077C7A2 /* DirectionalPad */,
 				CC5C31F720B4F2E30077C7A2 /* Unit Tests */,
 				CC5C31EB20B4F2E30077C7A2 /* Products */,
 				CC5C322A20B4F3A70077C7A2 /* Frameworks */,
@@ -73,13 +85,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC5C31EC20B4F2E30077C7A2 /* iOS */ = {
+		CC5C31EC20B4F2E30077C7A2 /* DirectionalPad */ = {
 			isa = PBXGroup;
 			children = (
 				CCE3743420BE0D03009DBF23 /* Source */,
 				CC5C31EE20B4F2E30077C7A2 /* Info.plist */,
 			);
-			path = iOS;
+			path = DirectionalPad;
 			sourceTree = "<group>";
 		};
 		CC5C31F720B4F2E30077C7A2 /* Unit Tests */ = {
@@ -101,8 +113,8 @@
 		CCE3743420BE0D03009DBF23 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */,
 				CC5C320420B4F3030077C7A2 /* DirectionalPad.swift */,
+				CC5C31ED20B4F2E30077C7A2 /* DirectionalPad.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC5C31FE20B4F2E30077C7A2 /* Build configuration list for PBXNativeTarget "DirectionalPad" */;
 			buildPhases = (
+				CCE3743E20BE2A24009DBF23 /* CopyFiles */,
 				CC5C31E520B4F2E30077C7A2 /* Sources */,
 				CC5C31E620B4F2E30077C7A2 /* Frameworks */,
 				CC5C31E720B4F2E30077C7A2 /* Headers */,
@@ -169,10 +182,11 @@
 				TargetAttributes = {
 					CC5C31E920B4F2E30077C7A2 = {
 						CreatedOnToolsVersion = 9.3.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 					};
 					CC5C31F220B4F2E30077C7A2 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -373,7 +387,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/DirectionalPad/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,8 +397,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPad;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/iOS/Source/axis\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -401,7 +416,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/DirectionalPad/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,7 +426,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPad;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/iOS/Source/axis\"";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -430,7 +446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronjsutton.DirectionalPadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
